@@ -89,9 +89,8 @@ public class LinkedList implements  List {
 
     @Override
     public Object remove(int pos) {
-        if(pos >= length){
-            System.out.println("Index Out of Bounds");
-            return null;
+        if(pos >= length) {
+            throw new IndexOutOfBoundsException("Index Out of Bounds");
         }
 
         Node temp = head;
